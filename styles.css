@@ -1,0 +1,41 @@
+/* Общие стили */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  background-color: #000;
+  background-image: url('noise.png');
+  background-blend-mode: overlay;
+  background-size: 200px;
+  background-position: 0px 0px; /* Для анимации */
+}
+
+/* Контейнер для логотипа */
+.logo-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Логотип */
+.logo {
+  max-width: 300px;
+  height: auto;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Текст "скоро. очень скоро" */
+.coming-soon {
+  position: fixed;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 14px; /* Маленький кегель */
+  letter-spacing: 10px; /* Большой межбуквенный интервал */
+  opacity: 0; /* Скрываем в начале */
+  transition: opacity 1s ease-in-out;
+}

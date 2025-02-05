@@ -1,60 +1,25 @@
-/* Общие стили */
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background: url(noise.png);
-}
-@font-face {
-  font-family: 'oswald';
-  src: url('/Pokrovka.ttf');
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Литературный журнал</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <!-- Первая страница с логотипом -->
+    <div class="first-screen">
+        <div class="logo-container">
+            <img src="logo.png" alt="Логотип журнала" class="logo">
+        </div>
+    </div>
 
-/* Первая страница (фон чёрный, с логотипом) */
-.first-screen {
-  position: fixed;
-  width: 100%;
-  height: 100%;
+    <!-- Вторая страница (белый фон с текстом) -->
+    <div class="second-screen">
+        <div class="coming-soon">скоро...<br>очень скоро</div>
+    </div>
 
-  z-index: 2;
-  transition: opacity 1.5s ease-in-out;
-}
-
-/* Контейнер для логотипа */
-.logo-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Логотип */
-.logo {
-  max-width: 300px;
-  height: auto;
-  transition: transform 0.5s ease-in-out, opacity 1s ease-in-out;
-  opacity: 1; /* Начальная прозрачность */
-}
-
-/* Вторая страница (фон белый) */
-.second-screen {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0; /* Скрыта в начале */
-  transition: opacity 1.5s ease-in-out;
-}
-
-/* Текст "скоро... очень скоро" */
-.coming-soon {
-  color: black;
-  font-size: 14px; /* Маленький кегель */
-  letter-spacing: 10px; /* Большой межбуквенный интервал */
-  text-align: center;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-}
+    <script src="script.js"></script>
+</body>
+</html>

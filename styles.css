@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Pokrovka';
+    src: url('Pokrovka.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: white;
+    overflow-x: hidden;
+    text-align: center;
+    height: 300vh;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-container {
+    position: fixed;
+    top: 65%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    width: 600%;
+    height: 600%;
+    z-index: 0; 
+}
+
+.logo-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mask-image: url('logo.svg');
+    -webkit-mask-image: url('logo.svg');
+    mask-size: 50%;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: black;
+    z-index: 1;
+}
+
+.logo-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255); 
+    z-index: 0; 
+    pointer-events: none; 
+}
+
+
+
+.noise {
+    position: fixed;
+    width: 1000vw;
+    height: 1000vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.noise::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+    background-size: 200px;
+    background-repeat: repeat;
+    opacity: 0.5;
+    animation: grain 0.25s steps(10) infinite;
+}
+
+@keyframes grain {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(-15px, -20px); }
+    20% { transform: translate(-25px, 10px); }
+    30% { transform: translate(10px, -50px); }
+    40% { transform: translate(-10px, 50px); }
+    50% { transform: translate(-30px, 20px); }
+    60% { transform: translate(30px, -10px); }
+    70% { transform: translate(0px, 30px); }
+    80% { transform: translate(20px, 70px); }
+    90% { transform: translate(-25px, 30px); }
+} 
+
+.text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 0.8em;
+    color: black;
+    z-index: -1;
+    font-family: 'Pokrovka', sans-serif;
+    letter-spacing: 1.2em;
+    white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+    .logo-mask {
+        width: 300wh;
+    }}

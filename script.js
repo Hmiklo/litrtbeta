@@ -10,9 +10,8 @@ document.addEventListener('scroll', function () {
     const maxScale = 600;
     const scale = Math.min(Math.max(scaleFactor, minScale), maxScale);
 
-    const moveX = scrollProgress * 0;
-    const moveY = scrollProgress * 379;
+    const moveX = 0; // не двигаем по оси X
+    const moveY = scrollProgress * 0; // сдвиг строго вниз
 
-    logoContainer.style.transform = `translate(calc(-50% + ${moveX}%), calc(-50% + ${moveY}%)) scale(${scale})`;
+    logoContainer.style.transform = `translate(-50%, calc(-50% + ${moveY}px)) scale(${scale})`;
 });
-

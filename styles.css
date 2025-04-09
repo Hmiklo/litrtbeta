@@ -34,7 +34,7 @@ body {
   .logo-container {
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 46.5%;
     transform: translate(-50%, -50%); /* Центрирование логотипа */
     transform-origin: center center; /* Центрируем трансформацию */
     width: 300%; /* Размер контейнера */
@@ -113,7 +113,7 @@ body {
     top: 50.2%;
     left: 50.6%;
     transform: translate(-50%, -50%);
-    font-size: 1em;
+    font-size: 0.7em;
     color: black;
     z-index: -1;
     font-family: 'Pokrovka', sans-serif;
@@ -128,6 +128,6 @@ body {
 
 @media (max-width: 600px) {
     .text {
-        font-size: 1em;
+        font-size: 0.7em;
     }
 }

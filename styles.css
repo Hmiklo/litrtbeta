@@ -5,6 +5,16 @@
     font-style: normal;
 }
 
+html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+  }
+  
+  html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Яндекс Браузер */
+  }
+  
+
 body {
     background-color: white;
     overflow-x: hidden;
@@ -103,18 +113,21 @@ body {
     top: 50.2%;
     left: 50.6%;
     transform: translate(-50%, -50%);
-    font-size: 1vw; /* Используй vw, чтобы шрифт адаптировался под размер окна */
+    font-size: 0.7em;
     color: black;
     z-index: -1;
     font-family: 'Pokrovka', sans-serif;
     letter-spacing: 1em;
     white-space: nowrap;
-    overflow: hidden; /* чтобы не показывались дополнительные символы */
+    overflow: hidden;
+    opacity: 0; /* ← добавляем начальную прозрачность */
+
+    transition: opacity 0.1s linear;
 }
 
 
 @media (max-width: 600px) {
     .text {
-        font-size: 1em;
+        font-size: 0.7em;
     }
 }
